@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="120" viewBox="0 0 440 120" role="img" aria-label="GymVerse">
+  <circle cx="60" cy="60" r="50" fill="#C9232C"/>
+  <circle cx="60" cy="60" r="30" fill="#15181C"/>
+  <circle cx="60" cy="60" r="11" fill="#FFFFFF"/>
+  <rect x="0" y="54" width="10" height="12" rx="3" fill="#15181C"/>
+  <rect x="110" y="54" width="10" height="12" rx="3" fill="#15181C"/>
+  <text x="140" y="74" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-weight="700" font-size="64" fill="#15181C" letter-spacing="-1">GymVerse</text>
+  <text x="142" y="100" font-family="Barlow,'Segoe UI',Arial,sans-serif" font-weight="500" font-size="16" fill="#5A626C">Open-source gym management</text>
+</svg>

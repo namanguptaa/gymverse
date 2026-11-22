@@ -1,0 +1,9 @@
+{
+  "name": "GymVerse",
+  "short_name": "GymVerse",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E8EBEE",
+  "theme_color": "#2346D8",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

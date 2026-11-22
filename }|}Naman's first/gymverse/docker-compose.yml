@@ -1,0 +1,24 @@
+# GymVerse with the prebuilt image from GitHub Container Registry.
+# Start:  docker compose up -d
+# Open:   http://localhost:3000  (or http://<server-ip>:3000)
+# To build from source instead, use: docker compose -f docker-compose.dev.yml up -d --build
+services:
+  gymverse:
+    image: ghcr.io/namanguptaa/gymverse:latest
+    container_name: gymverse
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      # Set to "true" once GymVerse is served over HTTPS (recommended)
+      - COOKIE_SECURE=false
+      # Set to "true" when running behind a reverse proxy (Caddy, Nginx, Traefik)
+      - TRUST_PROXY=false
+      # Number of daily database backups to keep
+      - BACKUP_KEEP=30
+    volumes:
+      # All gym data and daily backups live here
+      - gymverse-data:/data
+
+volumes:
+  gymverse-data:

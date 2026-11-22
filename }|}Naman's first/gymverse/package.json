@@ -1,0 +1,22 @@
+{
+  "name": "gymverse",
+  "version": "1.0.0",
+  "description": "Free, open-source gym management: attendance, check-in and check-out, membership plans, workouts, PRs and WhatsApp/SMS reminders. Self-hosted, no external services.",
+  "license": "AGPL-3.0-or-later",
+  "author": "Naman",
+  "homepage": "https://github.com/namanguptaa/gymverse",
+  "repository": { "type": "git", "url": "https://github.com/namanguptaa/gymverse.git" },
+  "bugs": { "url": "https://github.com/namanguptaa/gymverse/issues" },
+  "keywords": ["gym", "fitness", "attendance", "membership", "self-hosted", "sqlite"],
+  "private": true,
+  "type": "commonjs",
+  "main": "server/index.js",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server/index.js",
+    "reset-password": "node --disable-warning=ExperimentalWarning server/cli.js reset-password",
+    "backup": "node --disable-warning=ExperimentalWarning server/cli.js backup",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js"
+  }
+}

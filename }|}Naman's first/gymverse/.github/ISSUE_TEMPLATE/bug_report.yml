@@ -1,0 +1,57 @@
+name: Bug report
+description: Something in GymVerse isn't working
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting! Please don't include real member names or phone numbers.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      placeholder: When I tap Check out on the tablet, nothing happens.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Members
+        2. Pick a member
+        3. Tap Check out
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How do you run GymVerse?
+      options:
+        - Docker (prebuilt image)
+        - Docker (built from source)
+        - Node.js
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: GymVerse version
+      description: Shown in Owner > Settings > About GymVerse.
+      placeholder: 1.0.0
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: Android tablet, Chrome
+  - type: textarea
+    id: logs
+    attributes:
+      label: Server logs (optional)
+      description: Output of `docker compose logs` or the terminal running `npm start`.
+      render: shell

@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest an idea for GymVerse
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What gym problem would this solve?
+      placeholder: Members often forget their plan is ending and stop coming.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: How do you imagine it working?
+    validations:
+      required: true
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who is this for?
+      options:
+        - Gym owner
+        - Members on the front-desk tablet
+        - Both
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else?
