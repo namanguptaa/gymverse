@@ -1,0 +1,19 @@
+# Builds GymVerse from this folder's source code.
+# Start: docker compose -f docker-compose.dev.yml up -d --build
+services:
+  gymverse:
+    build: .
+    image: gymverse:local
+    container_name: gymverse
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - COOKIE_SECURE=false
+      - TRUST_PROXY=false
+      - BACKUP_KEEP=30
+    volumes:
+      - gymverse-data:/data
+
+volumes:
+  gymverse-data:
